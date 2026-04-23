@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Nigam | Commercial Analytics & AI</title>
+    <meta name="description" content="Portfolio of Abhishek Nigam, MS Business Analytics. Expert in Power BI, Tableau, SQL, and Agentic AI workflows.">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ENHANCEMENT: Upgraded fonts — Bricolage Grotesque (display) + DM Sans (body) -->
+    <!-- Replacing generic Inter + Space Grotesk for a more distinctive editorial feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ENHANCEMENT: Scroll progress indicator bar at the top of the page -->
+    <div id="scroll-progress"></div>
+
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Abhi<span class="dot">.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <!-- ENHANCEMENT: Hamburger button for mobile navigation -->
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ENHANCEMENT: Full-screen mobile overlay menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-close-btn" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="mailto:abnigam.ai@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/abhisheknigam-" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+
+    <section id="hero" class="section">
+        <!-- ENHANCEMENT: Hero dot-grid decorative overlay -->
+        <div class="hero-dot-grid"></div>
+        <div class="hero-content reveal">
+            <div class="hero-badge">
+                <span class="badge-dot"></span> Available for Roles Globally
+            </div>
+            <h2 class="greeting">Hello, I'm</h2>
+            <h1 class="name gradient-text">Abhishek Nigam</h1>
+            <!-- ENHANCEMENT: Typed rotating text for role subtitle -->
+            <h3 class="title">
+                <span class="typed-static">Commercial Analytics & </span><span class="typed-word"></span><span class="typed-cursor">|</span>
+            </h3>
+            <p class="intro">
+                Translating complex data into strategic business decisions. Specializing in automated reporting, predictive modeling, and agentic AI workflows.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary-btn">
+                    <span>Explore Projects</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+            <!-- ENHANCEMENT: Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Scroll</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="about-container reveal delay-1">
+            <div class="about-text glass-card">
+                <p>I am a data professional with 4+ years of experience delivering Power BI, Tableau, and SQL-driven insights across US biotech, Indian real estate, and financial services.</p>
+                <p>Holding an MS in Business Analytics from UC San Diego (Class of 2025), I have a proven track record of building automated reporting infrastructure that drastically reduces manual effort and identifies high-value revenue optimizations.</p>
+                <!-- ENHANCEMENT: Stats with data-target for counter animation -->
+                <div class="achievements">
+                    <div class="stat-box">
+                        <h4 class="gradient-text counter" data-target="1000" data-suffix="+">0</h4>
+                        <p>Hours Saved Annually</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4 class="gradient-text counter" data-target="44" data-suffix="%">0</h4>
+                        <p>CAC Reduction</p>
+                    </div>
+                    <div class="stat-box">
+                        <h4 class="gradient-text counter-dollar" data-target="2.1">$0</h4>
+                        <p>Leakage Flagged</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="section-title reveal">Technical Arsenal</h2>
+        <div class="skills-grid">
+            
+            <div class="skill-category glass-card reveal">
+                <div class="skill-icon-wrap"><i class="fas fa-chart-pie"></i></div>
+                <h3>BI & Visualization</h3>
+                <div class="skill-tags">
+                    <span class="tag-blue">Power BI (DAX)</span>
+                    <span class="tag-blue">Tableau</span>
+                    <span class="tag-blue">KPI Dashboards</span>
+                </div>
+            </div>
+            
+            <div class="skill-category glass-card reveal delay-1">
+                <div class="skill-icon-wrap"><i class="fas fa-database"></i></div>
+                <h3>Data Engineering</h3>
+                <div class="skill-tags">
+                    <span class="tag-violet">Advanced SQL</span>
+                    <span class="tag-violet">Snowflake</span>
+                    <span class="tag-violet">ETL Pipelines</span>
+                </div>
+            </div>
+            
+            <div class="skill-category glass-card reveal delay-2">
+                <div class="skill-icon-wrap"><i class="fas fa-brain"></i></div>
+                <h3>Machine Learning</h3>
+                <div class="skill-tags">
+                    <span class="tag-teal">Python</span>
+                    <span class="tag-teal">XGBoost</span>
+                    <span class="tag-teal">Agentic LLMs</span>
+                    <span class="tag-teal">Predictive Modeling</span>
+                </div>
+            </div>
+
+            <div class="skill-category glass-card reveal delay-1">
+                <div class="skill-icon-wrap"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud Stack</h3>
+                <div class="skill-tags">
+                    <span class="tag-amber">AWS (EC2, S3)</span>
+                    <span class="tag-amber">AWS SageMaker</span>
+                    <span class="tag-amber">Microsoft Azure</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <h2 class="section-title reveal">Professional Journey</h2>
+        <div class="timeline reveal">
+            
+            <div class="timeline-item left reveal delay-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">Nov 2025 — Mar 2026</span>
+                    <h3 class="timeline-title">Graduate Research Assistant</h3>
+                    <h4 class="timeline-company"><i class="fas fa-university"></i> UC San Diego</h4>
+                    <ul class="timeline-bullets">
+                        <li>Engineered Python-based automated validation workflows for 5,000+ behavioral economics records, enabling zero-defect datasets.</li>
+                        <li>Negotiated a batched delivery system with stakeholders to manage competing high-stakes deadlines effectively.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item right reveal delay-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">Mar 2025 — Jun 2025</span>
+                    <h3 class="timeline-title">Commercial Analytics Consultant</h3>
+                    <h4 class="timeline-company"><i class="fas fa-flask"></i> Eclipse Bioinnovations Inc</h4>
+                    <ul class="timeline-bullets">
+                        <li>Led the end-to-end development of an automated Tableau dashboard translating complex SQL/Python models for executive stakeholders.</li>
+                        <li>Rescued an at-risk project, reducing CAC by 44%, saving 15+ hours monthly, and identifying $150K+ in cost optimizations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item left reveal delay-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">Sep 2023 — Jun 2024</span>
+                    <h3 class="timeline-title">Data Analyst</h3>
+                    <h4 class="timeline-company"><i class="fas fa-building"></i> Jaanki Infra Developers</h4>
+                    <ul class="timeline-bullets">
+                        <li>Optimized the marketing channel mix to transition away from traditional broker models, reducing CAC by 40%.</li>
+                        <li>Engineered a robust demand forecasting model and standard QA checklist, improving planning accuracy by 25%.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item right reveal delay-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="timeline-date">Aug 2020 — Aug 2023</span>
+                    <h3 class="timeline-title">Investment Data Analyst</h3>
+                    <h4 class="timeline-company"><i class="fas fa-chart-line"></i> JM Financial Services</h4>
+                    <ul class="timeline-bullets">
+                        <li>Built and deployed an automated ETL pipeline (Power Query, DAX) and real-time Power BI risk dashboards.</li>
+                        <li>Drove immediate leadership adoption, improving reporting efficiency by 40% and saving over 1,000 analyst hours annually.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title reveal">Featured Work</h2>
+        
+        <div class="view-toggle-container reveal">
+            <div class="view-toggle">
+                <button class="toggle-btn active" id="btn-skill-view">View by Skill</button>
+                <button class="toggle-btn" id="btn-domain-view">View by Domain</button>
+            </div>
+        </div>
+
+        <div class="filter-controls reveal" id="filters-skill">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="dl">Deep Learning</button>
+            <button class="filter-btn" data-filter="ai">Agentic AI</button>
+            <button class="filter-btn" data-filter="powerbi">Power BI</button>
+            <button class="filter-btn" data-filter="tableau">Tableau</button>
+            <button class="filter-btn" data-filter="sql">SQL</button>
+        </div>
+
+        <div class="filter-controls reveal" id="filters-domain" style="display: none;">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="fraud">Fraud Analytics</button>
+            <button class="filter-btn" data-filter="finance">Financial Analytics</button>
+            <button class="filter-btn" data-filter="customer">Marketing & Customer</button>
+            <button class="filter-btn" data-filter="supply">Supply Chain & Pricing</button>
+            <button class="filter-btn" data-filter="operations">Operations & Public</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+        </div>
+    </section>
+
+    <!-- Project Modal (unchanged structure) -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <section id="certifications" class="section">
+        <h2 class="section-title reveal">Certifications</h2>
+        <div class="cert-grid reveal">
+            
+            <div class="cert-card glass-card">
+                <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                <div class="cert-details">
+                    <h3>Microsoft PL-300</h3>
+                    <p>Power BI Data Analyst</p>
+                    <div class="cert-badge">Certified</div>
+                </div>
+            </div>
+
+            <div class="cert-card glass-card delay-1">
+                <div class="cert-icon"><i class="fas fa-database"></i></div>
+                <div class="cert-details">
+                    <h3>Microsoft DP-900</h3>
+                    <p>Azure Data Fundamentals</p>
+                    <div class="cert-badge">Certified</div>
+                </div>
+            </div>
+
+            <div class="cert-card glass-card delay-2">
+                <div class="cert-icon"><i class="fas fa-robot"></i></div>
+                <div class="cert-details">
+                    <h3>Microsoft AI-102</h3>
+                    <p>Designing & Implementing Azure AI</p>
+                    <div class="cert-badge">Certified</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="contact-container glass-card reveal">
+            <h2 class="section-title" style="margin-bottom: 10px;">Let's Connect</h2>
+            <p style="margin-bottom: 30px; color: var(--text-muted);">Available immediately for remote and hybrid roles globally.</p>
+            <div class="contact-links">
+                <a href="mailto:abnigam.ai@gmail.com" class="contact-item">
+                    <div class="icon-wrap"><i class="fas fa-envelope"></i></div>
+                    <span>abnigam.ai@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/abhisheknigam-" target="_blank" class="contact-item">
+                    <div class="icon-wrap"><i class="fab fa-linkedin"></i></div>
+                    <span>LinkedIn Profile</span>
+                </a>
+                <a href="https://datascienceportfol.io/abhinigam707" target="_blank" class="contact-item">
+                    <div class="icon-wrap"><i class="fas fa-briefcase"></i></div>
+                    <span>Data Science Portfolio</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <p class="footer-logo">Abhi<span class="dot">.</span></p>
+            <p>&copy; 2026 Abhishek Nigam &mdash; Built with precision.</p>
+            <div class="footer-links">
+                <a href="mailto:abnigam.ai@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/abhisheknigam-" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
