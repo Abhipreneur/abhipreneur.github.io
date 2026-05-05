@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thematic Funds for Indian Investors — May 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  :root {
+    --paper: #f5f1e8;
+    --paper-2: #ebe5d3;
+    --ink: #1a1a1a;
+    --ink-soft: #3d3d3d;
+    --muted: #6b6557;
+    --line: #c9c2b0;
+    --line-strong: #1a1a1a;
+    --accent: #b8341d;
+    --accent-2: #1f4d3f;
+    --gold: #a07b1f;
+    --low: #2d6a4f;
+    --mod: #b8741b;
+    --high: #c44515;
+    --very-high: #8b1e1e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter Tight', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 15px;
+    background-image:
+      radial-gradient(circle at 0% 0%, rgba(184, 52, 29, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 100% 100%, rgba(31, 77, 63, 0.04) 0%, transparent 40%);
+  }
+
+  /* INTEGRATED PORTFOLIO NAVIGATION */
+  .portfolio-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+  }
+  .portfolio-nav-logo a {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .portfolio-nav-logo span { color: var(--accent); }
+  .portfolio-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+  }
+  .portfolio-nav-links a {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .portfolio-nav-links a:hover,
+  .portfolio-nav-links a.active {
+    color: var(--accent);
+  }
+
+  .container { max-width: 1280px; margin: 0 auto; padding: 40px 40px 60px; }
+
+  /* MASTHEAD */
+  .masthead {
+    border-top: 6px solid var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding: 32px 0 24px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+  .masthead::after {
+    content: ""; position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--ink);
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .masthead h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .masthead h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+  }
+  .deck {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 300;
+    color: var(--ink-soft);
+    max-width: 780px;
+    margin-top: 12px;
+    font-style: italic;
+  }
+
+  /* INTRO */
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 48px;
+  }
+  .intro-side {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .intro-side strong { color: var(--ink); display: block; margin-bottom: 4px; }
+  .intro-body p { margin-bottom: 14px; font-size: 16px; }
+  .intro-body p:first-child::first-letter {
+    font-family: 'Fraunces', serif;
+    font-size: 64px;
+    float: left;
+    line-height: 0.9;
+    margin: 4px 8px -4px 0;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  /* WARNING BAR */
+  .warn {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 28px;
+    margin: 32px 0;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .warn-icon {
+    font-family: 'Fraunces', serif;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .warn strong { color: #f0d9a8; }
+
+  /* SECTION HEADER */
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    margin-bottom: 6px;
+  }
+  .section-head {
+    border-top: 2px solid var(--ink);
+    padding: 38px 0 24px;
+    margin-top: 64px;
+    margin-bottom: 24px;
+  }
+  .section-head h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+  }
+  .section-head h2 .quiet { font-weight: 300; color: var(--muted); font-style: italic; }
+  .section-summary {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin-top: 14px;
+    max-width: 880px;
+  }
+
+  /* TABLE */
+  .table-wrap {
+    overflow-x: auto;
+    margin: 24px 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: var(--paper);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 1100px;
+  }
+  thead th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-align: left;
+    padding: 14px 12px 10px;
+    border-bottom: 1px solid var(--line-strong);
+    vertical-align: bottom;
+    font-weight: 500;
+    background: var(--paper-2);
+  }
+  thead th:first-child { padding-left: 18px; }
+  tbody td {
+    padding: 16px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody td:first-child { padding-left: 18px; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(184, 52, 29, 0.03); }
+  .fund-name {
+    font-weight: 600;
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    line-height: 1.3;
+    color: var(--ink);
+  }
+  .fund-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 3px;
+  }
+  .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+  }
+  .num-pos { color: var(--low); }
+  .num-bold { font-weight: 600; }
+  .pill {
+    display: inline-block;
+    padding: 3px 9px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .pill-low { background: rgba(45, 106, 79, 0.12); color: var(--low); }
+  .pill-mod { background: rgba(184, 116, 27, 0.12); color: var(--mod); }
+  .pill-high { background: rgba(196, 69, 21, 0.12); color: var(--high); }
+  .pill-very-high { background: rgba(139, 30, 30, 0.12); color: var(--very-high); }
+  .pill-etf { background: rgba(31, 77, 63, 0.12); color: var(--accent-2); }
+  .pill-fof { background: rgba(160, 123, 31, 0.14); color: var(--gold); }
+  .pill-mf { background: rgba(26, 26, 26, 0.08); color: var(--ink-soft); }
+  .pill-closed { background: rgba(139, 30, 30, 0.18); color: var(--very-high); border: 1px dashed var(--very-high); }
+  .footnote {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+  .footnote sup { color: var(--accent); font-weight: 700; }
+
+  /* PICKS */
+  .picks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 32px 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  .pick {
+    padding: 32px 28px;
+    border-right: 1px solid var(--line);
+    position: relative;
+  }
+  .pick:last-child { border-right: none; }
+  .pick-rank {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .pick h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .pick p {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ANALYSIS GRID */
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    margin: 40px 0;
+  }
+  .analysis-block {
+    border-top: 1px solid var(--line-strong);
+    padding-top: 20px;
+  }
+  .analysis-block h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .analysis-block p { margin-bottom: 12px; font-size: 14.5px; }
+  .analysis-block .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-right: 6px;
+  }
+
+  /* USE CASE TABLE */
+  .use-cases {
+    margin: 40px 0;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  .use-case {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--line);
+    gap: 32px;
+    align-items: baseline;
+  }
+  .use-case:last-child { border-bottom: none; }
+  .use-case-goal {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+  .use-case-text { font-size: 15px; line-height: 1.6; }
+  .use-case-text strong { color: var(--ink); }
+
+  /* RISK CARDS */
+  .risk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .risk-card {
+    border-left: 3px solid var(--accent);
+    padding: 6px 0 6px 20px;
+  }
+  .risk-card h5 {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .risk-card p {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* FOOTER */
+  .colophon {
+    margin-top: 80px;
+    padding: 32px 0;
+    border-top: 4px solid var(--ink);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    line-height: 1.8;
+  }
+  .colophon-links a {
+    color: var(--ink);
+    font-size: 16px;
+    margin-left: 12px;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .colophon-links a:hover { color: var(--accent); }
+  .colophon strong { color: var(--ink); }
+
+  /* small ornament */
+  .ornament {
+    text-align: center;
+    margin: 56px 0;
+    font-family: 'Fraunces', serif;
+    color: var(--accent);
+    letter-spacing: 12px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 900px) {
+    .portfolio-nav { flex-direction: column; gap: 16px; padding: 20px; }
+    .portfolio-nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+    .container { padding: 32px 20px; }
+    .intro { grid-template-columns: 1fr; gap: 24px; }
+    .picks { grid-template-columns: 1fr; }
+    .pick { border-right: none; border-bottom: 1px solid var(--line); }
+    .pick:last-child { border-bottom: none; }
+    .analysis-grid { grid-template-columns: 1fr; gap: 32px; }
+    .use-case { grid-template-columns: 1fr; gap: 4px; }
+    .risk-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- INTEGRATED NAVIGATION HEADER -->
+<nav class="portfolio-nav">
+  <div class="portfolio-nav-logo">
+      <a href="index.html">Abhi<span>.</span></a>
+  </div>
+  <ul class="portfolio-nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#certifications">Certifications</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="eyebrow">
+    <span>Vol. 01 · Indian Mutual Fund Research</span>
+    <span>05 May 2026 · Lucknow Edition</span> 
+    <br>
+    <span>Author · Abhishek Nigam </span>
+  </div>
+  <h1>The Global Tilt: <em>thematic funds</em><br>for the Indian investor</h1>
+  <p class="deck">A practical, data-anchored guide to gaining exposure to U.S. equities, critical-mineral miners and commodities — <strong style="font-style:normal;">without filing a single foreign-remittance form.</strong></p>
+</header>
+
+<!-- INTRO -->
+<section class="intro">
+  <aside class="intro-side">
+    <div><strong>Coverage</strong>20 funds across 3 themes</div>
+    <div style="margin-top:14px"><strong>Lens</strong>Direct plans, growth option preferred</div>
+    <div style="margin-top:14px"><strong>Data sources</strong>Value Research, Tickertape, AMC factsheets, Groww, INDmoney, ET Money</div>
+    <div style="margin-top:14px"><strong>As-of</strong>Late April / early May 2026 unless noted</div>
+    <div style="margin-top:14px"><strong>Currency</strong>INR (₹91.5/USD area)</div>
+  </aside>
+  <div class="intro-body">
+    <p>Three big stories have re-shaped Indian retail flows over the last twelve months: the relentless run-up in U.S. mega-cap technology, a once-in-a-generation rally in gold and silver, and the strategic awakening around copper, lithium and rare-earths. All three sit outside the daily diet of a domestic-only portfolio — yet all three can be accessed in rupees, through Indian AMCs, with no LRS paperwork.</p>
+    <p>This report assembles the funds and ETFs that provide that access. Each is mapped against the data points an investor actually needs: latest NAV, trailing returns, expense burden, AUM, and — critically in 2026 — whether the fund is open to fresh subscriptions, since SEBI's $7 billion overseas-investment ceiling has frozen out several once-popular options.</p>
+    <p>The headline returns you will see below are unusually large. They reflect three tailwinds firing together: a 21% NASDAQ-100 gain in 2025, gold up roughly 60–70% in INR, and silver and gold-miners delivering outsized leverage. Treat them as the high-water mark, not the base case.</p>
+  </div>
+</section>
+
+<div class="warn">
+  <span class="warn-icon">!</span>
+  <div><strong>Reading the "open / closed" status:</strong> SEBI's overseas-investment cap has been fully consumed since 2022. Several international funds — including <em>Motilal Oswal NASDAQ 100 FoF</em> and <em>S&amp;P 500 Index Fund</em> — have suspended fresh inflows. ICICI Prudential reopened three of its international schemes from 27 January 2026 with a hard cap of ₹2 lakh per PAN per month. Always verify subscription status with the AMC before you transact.</div>
+</div>
+
+<!-- ===================== SECTION 1: US ===================== -->
+<section class="section-head">
+  <div class="section-num">§ 01 — Theme One</div>
+  <h2>U.S. market exposure <span class="quiet">— from rupee accounts</span></h2>
+  <p class="section-summary">NASDAQ-100 trackers, S&amp;P 500 vehicles, the FANG+ basket and one actively-managed bluechip fund. The cheapest passive option here costs you 0.16%; the priciest active one, 1.51%.</p>
+</section>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr>
+    <th style="min-width:220px">Fund</th>
+    <th>Type</th>
+    <th>NAV (₹)</th>
+    <th>1-Yr Return</th>
+    <th>3-Yr CAGR</th>
+    <th>5-Yr CAGR</th>
+    <th>Risk</th>
+    <th>Expense</th>
+    <th>AUM (₹ Cr)</th>
+    <th>Exit Load</th>
+    <th>Status / Index</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td><div class="fund-name">Motilal Oswal NASDAQ 100 ETF</div><div class="fund-sub">NSE: N100 · MOFN100</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">251.56</td>
+  <td class="num num-bold num-pos">56.88%</td>
+  <td class="num">34.02%</td>
+  <td class="num">19.96%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.59%</td>
+  <td class="num">10,971</td>
+  <td class="num">Nil</td>
+  <td>NASDAQ-100 TRI · trades on exchange<sup>1</sup></td>
+</tr>
+<tr>
+  <td><div class="fund-name">Kotak NASDAQ 100 FoF — Direct</div><div class="fund-sub">Kotak US Specific Equity Passive FoF</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">26.38</td>
+  <td class="num num-bold num-pos">~58%</td>
+  <td class="num">32.06%</td>
+  <td class="num">20.49%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.24%</td>
+  <td class="num">3,592</td>
+  <td class="num">Nil</td>
+  <td>iShares NASDAQ 100 UCITS · open<sup>2</sup></td>
+</tr>
+<tr>
+  <td><div class="fund-name">Navi NASDAQ 100 FoF — Direct</div><div class="fund-sub">launched March 2022</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">Data NA</td>
+  <td class="num num-pos">27–29%</td>
+  <td class="num">34–36%</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.16%</td>
+  <td class="num">1,061</td>
+  <td class="num">Nil</td>
+  <td>iShares NASDAQ 100 UCITS · open · cheapest in category</td>
+</tr>
+<tr>
+  <td><div class="fund-name">Motilal Oswal NASDAQ 100 FoF — Direct</div><div class="fund-sub">launched Nov 2018</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">Data NA</td>
+  <td class="num num-pos">11–23%</td>
+  <td class="num">36–38%</td>
+  <td class="num">19–20%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.22%</td>
+  <td class="num">6,159</td>
+  <td class="num">1% &lt; 15 days</td>
+  <td><span class="pill pill-closed">Closed to new SIP</span> Suspended 5 Jan 2025</td>
+</tr>
+<tr>
+  <td><div class="fund-name">ICICI Prudential US Bluechip Equity — Direct</div><div class="fund-sub">active mgmt; benchmark S&amp;P 500 TRI</div></td>
+  <td><span class="pill pill-mf">MF</span></td>
+  <td class="num">82.75</td>
+  <td class="num num-bold num-pos">28.67%</td>
+  <td class="num">15.65%</td>
+  <td class="num">12.14%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">1.16%</td>
+  <td class="num">3,481</td>
+  <td class="num">1% &lt; 1 month</td>
+  <td>Reopened 27 Jan 2026 · ₹2 L/PAN/mo cap<sup>3</sup></td>
+</tr>
+<tr>
+  <td><div class="fund-name">Motilal Oswal S&amp;P 500 Index Fund — Direct</div><div class="fund-sub">launched April 2020</div></td>
+  <td><span class="pill pill-mf">Index Fund</span></td>
+  <td class="num">31.54</td>
+  <td class="num num-bold num-pos">45.63%</td>
+  <td class="num">~26–27%<sup>†</sup></td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">~0.49%</td>
+  <td class="num">3,936</td>
+  <td class="num">1% &lt; 15 days</td>
+  <td><span class="pill pill-closed">SIP suspended Jan 2025</span> S&amp;P 500 TRI</td>
+</tr>
+<tr>
+  <td><div class="fund-name">Mirae Asset NYSE FANG+ ETF</div><div class="fund-sub">NSE: MAFANG</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">150.91</td>
+  <td class="num num-bold num-pos">~52%</td>
+  <td class="num">~54%</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.66%</td>
+  <td class="num">3,185</td>
+  <td class="num">Nil</td>
+  <td>NYSE FANG+ TRI · 10 mega-cap tech names</td>
+</tr>
+<tr>
+  <td><div class="fund-name">Mirae Asset NYSE FANG+ ETF FoF — Direct</div><div class="fund-sub">for non-demat investors</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">38.40</td>
+  <td class="num num-bold num-pos">52.47%</td>
+  <td class="num">54.31%</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.70%</td>
+  <td class="num">2,068</td>
+  <td class="num">Check AMC</td>
+  <td>Wraps FANG+ ETF · for SIP investors</td>
+</tr>
+<tr>
+  <td><div class="fund-name">Edelweiss US Technology Equity FoF — Direct</div><div class="fund-sub">JPMorgan US Technology Fund feeder</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">37.05</td>
+  <td class="num num-bold num-pos">51.06%</td>
+  <td class="num">~36%</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">1.51%</td>
+  <td class="num">3,255</td>
+  <td class="num">1% &lt; 12 mo</td>
+  <td>Active US-tech bets · monthly SIP open</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p class="footnote">
+<sup>1</sup> ETF unit creation periodically constrained due to SEBI overseas limits — monitor NAV vs market price before trading.&nbsp;
+<sup>2</sup> Subject to available headroom under industry overseas cap; verify with AMC.&nbsp;
+<sup>3</sup> Cap also applies to ICICI's NASDAQ 100 Index Fund and Strategic Metal &amp; Energy FoF.&nbsp;
+<sup>†</sup> 3-Yr cumulative reported as 104%; CAGR derived. NAV/return data sourced from Value Research, Tickertape, ET Money, AMC factsheets and INDmoney as of late April–early May 2026.
+</p>
+
+<!-- ===================== SECTION 2: RARE EARTH / MINING ===================== -->
+<section class="section-head">
+  <div class="section-num">§ 02 — Theme Two</div>
+  <h2>Rare-earth, critical minerals <span class="quiet">&amp; global mining</span></h2>
+  <p class="section-summary">India does not yet have a pure-play "lithium &amp; cobalt" ETF. The closest you get is a critical-minerals FoF, two world-mining feeder funds, and domestic metals/commodities equity. Read the underlying basket carefully.</p>
+</section>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr>
+    <th style="min-width:220px">Fund</th>
+    <th>Type</th>
+    <th>NAV (₹)</th>
+    <th>1-Yr Return</th>
+    <th>3-Yr CAGR</th>
+    <th>5-Yr CAGR</th>
+    <th>Risk</th>
+    <th>Expense</th>
+    <th>AUM (₹ Cr)</th>
+    <th>Exit Load</th>
+    <th>Underlying / Notes</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td><div class="fund-name">ICICI Pru Strategic Metal &amp; Energy Equity FoF — Direct</div><div class="fund-sub">launched Feb 2022 · purest critical-minerals proxy in India</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">31.44</td>
+  <td class="num num-bold num-pos">84.70%</td>
+  <td class="num">30.73%</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">1.01%</td>
+  <td class="num">292</td>
+  <td class="num">1% &lt; 1 yr</td>
+  <td>First Trust Strategic Metal &amp; Energy UCITS · oil + lithium + uranium + copper miners · ₹2 L/PAN/mo cap</td>
+</tr>
+<tr>
+  <td><div class="fund-name">DSP World Mining FoF — Direct</div><div class="fund-sub">feeds BlackRock GF World Mining Fund</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">35.47</td>
+  <td class="num num-bold num-pos">~93–103%</td>
+  <td class="num">~27%</td>
+  <td class="num">~13%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">1.65%</td>
+  <td class="num">171</td>
+  <td class="num">1% &lt; 12 mo</td>
+  <td>Global diversified miners — BHP, Rio Tinto, Glencore, Freeport, Newmont</td>
+</tr>
+<tr>
+  <td><div class="fund-name">DSP World Gold Mining Overseas Equity Omni FoF — Direct</div><div class="fund-sub">feeds BlackRock GF World Gold Fund</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">66.61</td>
+  <td class="num num-bold num-pos">~204%</td>
+  <td class="num">~65%</td>
+  <td class="num">~34%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">1.73%</td>
+  <td class="num">1,975</td>
+  <td class="num">1% &lt; 12 mo</td>
+  <td>Pure-play gold &amp; precious-metal miners (Newmont, Barrick, Agnico)</td>
+</tr>
+<tr>
+  <td><div class="fund-name">DSP Natural Resources &amp; New Energy — Direct</div><div class="fund-sub">domestic mandate ≥ 80%; some overseas feeder exposure</div></td>
+  <td><span class="pill pill-mf">Equity MF</span></td>
+  <td class="num">125.25</td>
+  <td class="num num-bold num-pos">34.57%</td>
+  <td class="num">25.42%</td>
+  <td class="num">19.86%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.81%</td>
+  <td class="num">2,044</td>
+  <td class="num">1% &lt; 12 mo</td>
+  <td>Indian + global natural-resource &amp; new-energy stocks · open</td>
+</tr>
+<tr>
+  <td><div class="fund-name">ICICI Prudential Commodities Fund — Direct</div><div class="fund-sub">domestic-only commodity equity</div></td>
+  <td><span class="pill pill-mf">Equity MF</span></td>
+  <td class="num">51.32</td>
+  <td class="num num-bold num-pos">~24–31%</td>
+  <td class="num">21.23%</td>
+  <td class="num">21.41%</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.97%</td>
+  <td class="num">3,342</td>
+  <td class="num">1% &lt; 3 mo</td>
+  <td>Nifty Commodities TRI · JSW Steel, Vedanta, Jindal Steel, UPL</td>
+</tr>
+<tr>
+  <td><div class="fund-name">ICICI Prudential Nifty Metal ETF</div><div class="fund-sub">NSE: METALIETF · launched Aug 2024</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">12.95</td>
+  <td class="num num-bold num-pos">42.79%</td>
+  <td>—</td>
+  <td>—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.40%</td>
+  <td class="num">1,034</td>
+  <td class="num">1% &lt; 3 mo</td>
+  <td>Nifty Metal TRI · 78% large-cap, 44% steel weight</td>
+</tr>
+<tr>
+  <td><div class="fund-name">Kotak Nifty Metal ETF / Nippon Nifty Metal ETF</div><div class="fund-sub">peer products tracking same index</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">Data NA</td>
+  <td class="num num-pos">~40–45%</td>
+  <td>—</td>
+  <td>—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">~0.20–0.40%</td>
+  <td class="num">Variable</td>
+  <td class="num">Nil–1%</td>
+  <td>Nifty Metal TRI · choose by tracking error &amp; liquidity</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p class="footnote">
+India does not currently offer a fund that tracks an index purely composed of rare-earth-element miners (e.g. MVIS Global Rare Earth/Strategic Metals or Solactive Critical Minerals). For that exposure, investors must use either (a) ICICI's Strategic Metal &amp; Energy FoF as the closest domestic substitute, or (b) the LRS route to buy U.S.-listed REMX, LIT, COPX, etc.
+</p>
+
+<!-- ===================== SECTION 3: COMMODITIES ===================== -->
+<section class="section-head">
+  <div class="section-num">§ 03 — Theme Three</div>
+  <h2>Commodities <span class="quiet">— gold, silver, oil and the broad basket</span></h2>
+  <p class="section-summary">Gold and silver ETFs in India have ballooned in 2026 on the back of a roughly 60–70% INR price-rally. The expense-ratio gap between leaders is small; tracking error and liquidity matter more.</p>
+</section>
+
+<div class="table-wrap">
+<table>
+<thead>
+  <tr>
+    <th style="min-width:220px">Fund</th>
+    <th>Type</th>
+    <th>NAV / Price (₹)</th>
+    <th>1-Yr Return</th>
+    <th>3-Yr CAGR</th>
+    <th>5-Yr CAGR</th>
+    <th>Risk</th>
+    <th>Expense</th>
+    <th>AUM (₹ Cr)</th>
+    <th>Exit Load</th>
+    <th>Underlying</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+  <td><div class="fund-name">Nippon India ETF Gold BeES</div><div class="fund-sub">NSE: GOLDBEES · launched 2007</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">~131</td>
+  <td class="num num-bold num-pos">~67–81%</td>
+  <td class="num">~33%</td>
+  <td class="num">17–18%</td>
+  <td><span class="pill pill-mod">Moderate–High</span></td>
+  <td class="num">0.79%</td>
+  <td class="num">~58,000</td>
+  <td class="num">Nil</td>
+  <td>Physical gold (99.5% purity) · highest liquidity</td>
+</tr>
+<tr>
+  <td><div class="fund-name">ICICI Prudential Gold ETF</div><div class="fund-sub">NSE: GOLDIETF</div></td>
+  <td class="num">125.98</td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num num-bold num-pos">~63–74%</td>
+  <td class="num">~33%</td>
+  <td class="num">~21%</td>
+  <td><span class="pill pill-mod">Moderate–High</span></td>
+  <td class="num">0.50%</td>
+  <td class="num">~24,470</td>
+  <td class="num">Nil</td>
+  <td>Physical gold · cheapest mainstream gold ETF</td>
+</tr>
+<tr>
+  <td><div class="fund-name">SBI Gold ETF</div><div class="fund-sub">NSE: SETFGOLD</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">~81</td>
+  <td class="num num-bold num-pos">~65–66%</td>
+  <td class="num">~32%</td>
+  <td class="num">17–18%</td>
+  <td><span class="pill pill-mod">Moderate–High</span></td>
+  <td class="num">~0.65%</td>
+  <td class="num">~14,500</td>
+  <td class="num">Nil</td>
+  <td>Physical gold · trusted PSU brand</td>
+</tr>
+<tr>
+  <td><div class="fund-name">Nippon India Silver ETF</div><div class="fund-sub">NSE: SILVERBEES · launched 2022</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">230.19</td>
+  <td class="num num-bold num-pos">~85–95%</td>
+  <td class="num">—</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.56%</td>
+  <td class="num">~30,675</td>
+  <td class="num">Nil</td>
+  <td>Physical silver · category leader by AUM</td>
+</tr>
+<tr>
+  <td><div class="fund-name">ICICI Prudential Silver ETF</div><div class="fund-sub">NSE: SILVERIETF</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">~85</td>
+  <td class="num num-bold num-pos">~85–90%</td>
+  <td class="num">—</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">~0.40%</td>
+  <td class="num">~10,000+</td>
+  <td class="num">Nil</td>
+  <td>Physical silver · low expense, growing AUM</td>
+</tr>
+<tr>
+  <td><div class="fund-name">HDFC Silver ETF</div><div class="fund-sub">NSE: HDFCSILVER</div></td>
+  <td><span class="pill pill-etf">ETF</span></td>
+  <td class="num">Data NA</td>
+  <td class="num num-pos">~85–90%</td>
+  <td class="num">—</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">~0.40%</td>
+  <td class="num">Variable</td>
+  <td class="num">Nil</td>
+  <td>Physical silver · backed by HDFC AMC</td>
+</tr>
+<tr>
+  <td><div class="fund-name">Nippon India Silver ETF FoF — Direct</div><div class="fund-sub">for SIP/non-demat investors</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">Data NA</td>
+  <td class="num num-pos">~85%</td>
+  <td class="num">—</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">0.23%</td>
+  <td class="num">~4,720</td>
+  <td class="num">1% &lt; 15 days</td>
+  <td>Wraps Nippon India Silver ETF</td>
+</tr>
+<tr>
+  <td><div class="fund-name">ICICI Pru Strategic Metal &amp; Energy FoF — Direct</div><div class="fund-sub">also covers oil-services exposure</div></td>
+  <td><span class="pill pill-fof">FoF</span></td>
+  <td class="num">31.44</td>
+  <td class="num num-bold num-pos">84.70%</td>
+  <td class="num">30.73%</td>
+  <td class="num">—</td>
+  <td><span class="pill pill-very-high">Very High</span></td>
+  <td class="num">1.01%</td>
+  <td class="num">292</td>
+  <td class="num">1% &lt; 1 yr</td>
+  <td>Closest available proxy for oil &amp; energy commodities</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p class="footnote">
+A pure crude-oil ETF is <strong>not available in India</strong>. The closest substitutes are (a) the ICICI Strategic Metal &amp; Energy FoF, (b) Nifty Energy / Nifty Oil &amp; Gas index ETFs (which hold Reliance, ONGC, IOC, BPCL — not crude itself), or (c) multi-asset funds that allocate to commodity-linked equity. Standalone copper, palladium, and platinum ETFs are also unavailable in the Indian rupee market.
+</p>
+
+<!-- ANALYSIS SECTION -->
+<div class="ornament">§ § §</div>
+
+<section class="section-head">
+  <div class="section-num">Analysis</div>
+  <h2>The picks, the risks, <span class="quiet">and which goal each theme serves</span></h2>
+</section>
+
+<h3 style="font-family:'Fraunces',serif; font-weight:500; font-size:26px; margin:32px 0 8px; letter-spacing:-0.01em;">Top 3 in each category</h3>
+
+<!-- US PICKS -->
+<p style="font-family:'JetBrains Mono',monospace; text-transform:uppercase; font-size:11px; letter-spacing:0.15em; color:var(--accent); margin:20px 0 0;">U.S. exposure</p>
+<div class="picks">
+  <div class="pick">
+    <div class="pick-rank">i.</div>
+    <h4>Kotak NASDAQ 100 FoF (Direct)</h4>
+    <p>The pragmatic winner. Open to fresh money, 0.24% expense, 5-year CAGR over 20%, and a UCITS-domiciled underlying that sidesteps U.S. estate-tax concerns for larger holdings. The default first NASDAQ vehicle for most Indian retail investors today.</p>
+  </div>
+  <div class="pick">
+    <div class="pick-rank">ii.</div>
+    <h4>Navi NASDAQ 100 FoF (Direct)</h4>
+    <p>The cost-killer. At 0.16% it is the cheapest NASDAQ wrapper in India, with comparable returns to Kotak's product. Smaller AUM and shorter track record are the only meaningful trade-offs against the lower fee.</p>
+  </div>
+  <div class="pick">
+    <div class="pick-rank">iii.</div>
+    <h4>ICICI Pru US Bluechip Equity (Direct)</h4>
+    <p>For the investor who wants U.S. exposure that <em>isn't</em> a tech bet. Active management, low single-digit Mag-7 weight, S&amp;P 500 benchmark. Now reopened with a ₹2 L/PAN/month cap. Higher fee (1.16%) is the cost of diversification.</p>
+  </div>
+</div>
+
+<!-- RARE EARTH PICKS -->
+<p style="font-family:'JetBrains Mono',monospace; text-transform:uppercase; font-size:11px; letter-spacing:0.15em; color:var(--accent); margin:32px 0 0;">Rare-earth &amp; mining</p>
+<div class="picks">
+  <div class="pick">
+    <div class="pick-rank">i.</div>
+    <h4>ICICI Pru Strategic Metal &amp; Energy FoF</h4>
+    <p>The only Indian fund that gives meaningful exposure to lithium, uranium, copper and oil-service equity through a single rupee transaction. 84%+ trailing year reflects a perfect commodity setup. Reopened January 2026 with cap.</p>
+  </div>
+  <div class="pick">
+    <div class="pick-rank">ii.</div>
+    <h4>DSP Natural Resources &amp; New Energy</h4>
+    <p>The most diversified, lowest-fee, openly available domestic option. Mixes Indian metals/energy stocks with overseas feeder allocation. Solid 5-year CAGR of nearly 20%, expense of 0.81%, and no subscription restrictions.</p>
+  </div>
+  <div class="pick">
+    <div class="pick-rank">iii.</div>
+    <h4>DSP World Mining FoF</h4>
+    <p>The pure global-mining play. Feeder into BlackRock's World Mining Fund — BHP, Rio Tinto, Glencore, Freeport. Outsized 1-year returns on the metals upcycle, but the longer-term record (5Y ~13%) shows how cyclical this is.</p>
+  </div>
+</div>
+
+<!-- COMMODITY PICKS -->
+<p style="font-family:'JetBrains Mono',monospace; text-transform:uppercase; font-size:11px; letter-spacing:0.15em; color:var(--accent); margin:32px 0 0;">Commodities</p>
+<div class="picks">
+  <div class="pick">
+    <div class="pick-rank">i.</div>
+    <h4>ICICI Prudential Gold ETF</h4>
+    <p>Lowest expense (0.50%) among major gold ETFs, ~₹24,500 Cr AUM, tight tracking. The most cost-efficient way to hold physical-gold exposure in a demat account. Edges out Nippon Gold BeES purely on fees.</p>
+  </div>
+  <div class="pick">
+    <div class="pick-rank">ii.</div>
+    <h4>Nippon India Silver ETF</h4>
+    <p>Category leader by both AUM (₹30,675 Cr) and liquidity. Silver is the higher-beta cousin of gold — its 1-year return reflects that, but so does its drawdown risk. Use it as a tactical tilt, not a foundation.</p>
+  </div>
+  <div class="pick">
+    <div class="pick-rank">iii.</div>
+    <h4>Nippon India ETF Gold BeES</h4>
+    <p>Still the most liquid gold ETF in India by trading volume — important if you ever need to exit large positions quickly. The 0.79% expense is higher than peers, but bid-ask economics often offset that for active traders.</p>
+  </div>
+</div>
+
+<!-- KEY RISKS -->
+<h3 style="font-family:'Fraunces',serif; font-weight:500; font-size:26px; margin:48px 0 8px; letter-spacing:-0.01em;">Key risks to map onto your portfolio</h3>
+
+<div class="risk-grid">
+  <div class="risk-card">
+    <h5>SEBI overseas-investment cap</h5>
+    <p>The $7 bn industry-wide ceiling and $1 bn ETF sub-limit remain fully utilised. Several funds have suspended fresh inflows; others operate with PAN-level monthly caps. Verify subscription status before every fresh purchase.</p>
+  </div>
+  <div class="risk-card">
+    <h5>Currency risk (cuts both ways)</h5>
+    <p>Rupee depreciation has added 4–5% per year of tailwind to U.S./global funds. A reversal — or RBI intervention — would mute headline returns. Currency is a real driver of these numbers, not a footnote.</p>
+  </div>
+  <div class="risk-card">
+    <h5>Commodity cyclicality</h5>
+    <p>Gold and silver ETFs delivered 60–95% in INR over twelve months. They have also delivered double-digit drawdowns historically. Mining-equity FoFs amplify both directions through operating leverage.</p>
+  </div>
+  <div class="risk-card">
+    <h5>Concentration in mega-cap tech</h5>
+    <p>NASDAQ-100 and especially FANG+ funds now have 45–80% of the basket in seven names. An "AI-spend disappoints" scenario or regulatory tightening on Mag-7 hits these baskets disproportionately.</p>
+  </div>
+  <div class="risk-card">
+    <h5>Tax: international funds taxed as non-equity</h5>
+    <p>For sales after July 2024 budget rules, holdings &gt; 24 months attract 12.5% LTCG without indexation. Holdings &lt; 24 months are taxed at slab rates. Domestic equity LTCG benefits don't apply.</p>
+  </div>
+  <div class="risk-card">
+    <h5>FoF expense stacking</h5>
+    <p>Many international "FoFs" pay an underlying ETF expense plus a domestic management fee. Effective costs can reach 0.80% even where the headline ratio reads 0.22%. Compare effective, not headline.</p>
+  </div>
+</div>
+
+<!-- USE CASE TABLE -->
+<h3 style="font-family:'Fraunces',serif; font-weight:500; font-size:26px; margin:48px 0 8px; letter-spacing:-0.01em;">Which theme for which goal</h3>
+
+<div class="use-cases">
+  <div class="use-case">
+    <div class="use-case-goal">Long-term growth</div>
+    <div class="use-case-text"><strong>U.S. exposure wins.</strong> Over 10–15 year windows, the S&amp;P 500 / NASDAQ-100 have compounded at low double-digit USD returns, and the rupee tailwind adds 3–4%. Anchor with Kotak / Navi NASDAQ 100 FoF; complement with ICICI Bluechip for diversification beyond tech. Position size: 10–25% of equity allocation as a typical guideline.</div>
+  </div>
+  <div class="use-case">
+    <div class="use-case-goal">Hedging inflation</div>
+    <div class="use-case-text"><strong>Commodities — specifically gold.</strong> Gold's role in an Indian portfolio is to hold real value when local inflation surprises and when global risk premia widen. ICICI Pru Gold ETF or Nippon Gold BeES at 5–15% of total portfolio. Silver complements but is materially more volatile; treat it as a satellite, not core.</div>
+  </div>
+  <div class="use-case">
+    <div class="use-case-goal">High-conviction thematic bets</div>
+    <div class="use-case-text"><strong>Rare-earth, mining and FANG+.</strong> These are where you express a view, not where you build a foundation. Use ICICI Strategic Metal &amp; Energy FoF or DSP World Mining FoF for the energy-transition / critical-minerals view; use Mirae FANG+ ETF for an AI-mega-cap view. Cap thematic bets at 5–10% of the portfolio combined; expect 30%+ drawdowns at some point.</div>
+  </div>
+  <div class="use-case">
+    <div class="use-case-goal">Currency diversification</div>
+    <div class="use-case-text"><strong>Any rupee-denominated international fund delivers this passively.</strong> The cheapest way to add USD-asset exposure is the lowest-cost open NASDAQ FoF (Navi or Kotak). For investors with very large portfolios, the FoF route also avoids the 40% U.S. estate-tax exposure that direct US-stock holdings &gt; $60,000 carry under non-resident rules.</div>
+  </div>
+</div>
+
+<div class="ornament">§ § §</div>
+
+<!-- UPDATED FOOTER -->
+<footer class="colophon">
+  <div style="flex: 1; min-width: 300px;">
+    <strong>Disclaimer.</strong> Educational research only — not investment advice. Past performance is not indicative of future results. Mutual fund investments are subject to market risks. Read scheme information documents carefully.
+  </div>
+  <div style="text-align: right;">
+    Compiled · 05 May 2026<br>
+    Author: Abhishek Nigam
+    <div class="colophon-links" style="margin-top: 8px;">
+        <a href="mailto:abnigam.ai@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/abhisheknigam-" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
