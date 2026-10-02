@@ -13,6 +13,23 @@
 
 // --- 1. Massive Portfolio Data (unchanged) ---
 const projectsData = [
+    // --- FLAGSHIP: RISK & CONTROLS ---
+    {
+        id: 30, skills: ["risk", "powerbi", "sql"], domains: ["finance"], skillLabel: "Risk & Controls", domainLabel: "Financial Analytics",
+        featured: true,
+        title: "Portfolio Risk & Controls Platform",
+        shortDesc: "End-to-end risk analytics platform for a simulated ₹1B Indian equity portfolio with automated controls, VaR/ES, stress testing, benchmark analytics, PostgreSQL, and Power BI.",
+        problem: "Create an auditable, institutional-style workflow that could ingest market data, quantify portfolio risk, enforce control thresholds, surface exceptions, and translate results into decision-ready BI reporting.",
+        approach: "Built a 25-security NSE portfolio and a reproducible pipeline spanning market-data ingestion, PostgreSQL storage, Python risk calculations, automated GREEN/AMBER/RED controls, historical and parametric VaR, Expected Shortfall, stress testing, benchmark analytics versus NIFTY 50, and Power BI reporting.",
+        techStack: ["Python", "PostgreSQL", "Power BI", "SQL", "VaR", "Expected Shortfall", "Stress Testing", "Risk Controls"],
+        outcomes: [
+            "Processed roughly 3 years of daily market data across 25 NSE securities with aligned, quality-checked return histories.",
+            "Calculated 99% historical VaR of ~2.08% (₹20.8M) and Expected Shortfall of ~2.81% (₹28.1M) on a ₹1B simulated portfolio.",
+            "Ran concentration, sector, top-5, VaR/ES, and stress controls with 60 GREEN, 6 AMBER, and 0 RED results.",
+            "Measured beta, correlation, tracking error, active return, information ratio, drawdown, and scenario losses against NIFTY 50."
+        ],
+        links: []
+    },
     // --- MACHINE LEARNING & DEEP LEARNING & AI ---
     {
         id: 24, skills: ["ml"], domains: ["fraud"], skillLabel: "Machine Learning", domainLabel: "Fraud Analytics",
@@ -94,7 +111,7 @@ const projectsData = [
         techStack: ["Power BI", "DAX", "Power Query"],
         outcomes: ["Identified key distribution gaps across retail and warehouse channels.", "Highlighted execution risks for suppliers via conditional formatting."],
         links: [
-            { url: "#", icon: "fas fa-chart-bar", text: "Live Power BI", type: "primary" },
+            { url: "https://app.powerbi.com/view?r=eyJrIjoiZWNmYjk5M2QtODFiYy00ODQ2LWJmMWEtYzU5NjY2YmJhNzgzIiwidCI6IjhhMTk4ODczLTRmZWMtNGU3Ni04MTgyLWNhNDc5ZWRiYmQ2MCIsImMiOjZ9", icon: "fas fa-chart-bar", text: "Live Power BI", type: "primary" },
             { url: "#", icon: "fab fa-github", text: "View GitHub Repo", type: "secondary" }
         ]
     },
@@ -142,7 +159,7 @@ const projectsData = [
         techStack: ["Tableau", "Data Visualization"],
         outcomes: ["Revealed major wage compression trends in the tech sector.", "Identified top 50 employers hoarding visa applications."],
         links: [
-            { url: "#", icon: "fas fa-chart-line", text: "Live Tableau", type: "primary" },
+            { url: "https://public.tableau.com/views/H1-BVisaPetitionDashboard/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link", icon: "fas fa-chart-line", text: "Live Tableau", type: "primary" },
             { url: "#", icon: "fab fa-github", text: "View GitHub Repo", type: "secondary" }
         ]
     },
@@ -187,7 +204,7 @@ window.addEventListener('scroll', updateScrollProgress, { passive: true });
 // [NEW] TYPED / ROTATING HERO SUBTITLE
 // Cycles through role descriptors with a typewriter effect
 // ============================================================
-const typedWords = ["AI Professional", "Data Strategist", "BI Developer", "ML Engineer"];
+const typedWords = ["Risk Analytics", "Business Intelligence", "Automation", "Applied AI"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -361,8 +378,9 @@ function renderProjects() {
         const topLabel = currentView === 'skill' ? project.skillLabel : project.domainLabel;
 
         const card = document.createElement('div');
-        card.className = `project-card glass-card reveal ${delayClass}`;
+        card.className = `project-card glass-card reveal ${delayClass}${project.featured ? ' project-card-featured' : ''}`;
         card.innerHTML = `
+            ${project.featured ? '<div class="project-featured-badge"><i class="fas fa-star"></i> Flagship</div>' : ''}
             <div class="project-category">${topLabel}</div>
             <h3 class="project-title">${project.title}</h3>
             <p class="project-desc">${project.shortDesc}</p>
